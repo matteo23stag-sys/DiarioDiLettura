@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diario di lettura della classe</title>
+    <script src="dist/main.js" defer></script>
+    
+</head>
+<body>
+    <h1>Diario di lettura della classe</h1>
+
+    <p>
+        <label for="Titolo"><b>Titolo del libro:</b></label>
+        <input type="text" id="titolo" name="titolo" required>
+    </p>
+
+    <p>
+        <label for="Titolo"><b>Autore:</b></label>
+        <input type="text" id="autore" name="autore" required>
+    </p>
+
+    <p>
+        <label for="genere"><b>Genere:</b></label>
+        <select id="genere" name="genere">
+            <option value="0">Scegli il genere</option>
+            <option value="av">Avventura</option>
+            <option value="gi">Giallo</option>
+            <option value="fa">Fantasy</option>
+            <option value="st">Storico</option>
+        </select>
+    </p>
+
+    <p><b>Formato:</b></p>
+    <input type="radio" id="cartaceo" name="formato" value="C">
+    <label for="cartaceo">Cartaceo</label>
+    <input type="radio" id="Ebook" name="formato" value="E">
+    <label for="Ebook">Ebook</label>
+
+    <p>
+        <b>Voto in stelle:</b>
+        <input type="number" id="stelle" name="stelle" min="1" max="5" step="1" value="1" required>
+    </p>
+
+    <p>
+        <b>Lo consiglio ai compagni: </b>
+        <input type="checkbox" id="consigliato" name="consigliato" value="consigliato">
+        <label for="consigliato">Consigliato</label>
+    </p>
+    
+    <button onclick="registra()">Registra libro</button>
+
+    <p id="messaggio"></p>
+    <img id="immagine" src="img/default.svg" alt="Immagine genere"; width="120">
+
+    <h2>Libri registrati</h2>
+    <ul id="elenco"></ul>
+
+    <h2>Riepilogo</h2>
+    <table border="1">
+        <tr>
+            <th>Genere</th>
+            <th>Numero di registrazioni</th>
+        </tr>
+        <tr>
+            <td>Avventura</td>
+            <td id="Conta_avventura">0</td>
+        </tr>
+        <tr>
+            <td>Giallo</td>
+            <td id="Conta_giallo">0</td>
+        </tr>
+        <tr>
+            <td>Fantasy</td>
+            <td id="Conta_fantasy">0</td>
+        </tr>
+        <tr>
+            <td>Storico</td>
+            <td id="Conta_storico">0</td>
+        </tr>
+    </table>
+
+</body>
+</html>
